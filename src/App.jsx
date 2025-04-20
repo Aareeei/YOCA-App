@@ -5,7 +5,7 @@ import CalendarView from './components/Calendar/CalendarView';
 import PomodoroTimer from './components/Pomodoro/PomodoroTimer';
 import DailySummary from './components/Summary/DailySummary';
 import TaskGenerator from './components/Tasks/TaskGenerator';
-import FocusMode from './components/FocusMode/FocusMode.js';
+import FocusMode from './components/FocusMode/FocusMode';
 
 
 
