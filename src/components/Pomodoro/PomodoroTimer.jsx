@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { TaskContext } from '../../context/TaskContext';
 
-const BREAK_DURATION = 5 * 60;
+const BREAK_DURATION = 0.01 * 60;
 
 const PomodoroTimer = () => {
   const { selectedTask, toggleComplete, addTask } = useContext(TaskContext);
