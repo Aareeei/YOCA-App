@@ -7,7 +7,7 @@ export const generateTasksFromPrompt = async (prompt) => {
         },
         body: JSON.stringify({ prompt })
       });
-  
+      console.log("GPT Response:", res);
       const { content } = await res.json();
       console.log("Raw GPT Output:", content);
   
