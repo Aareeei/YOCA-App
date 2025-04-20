@@ -35,6 +35,18 @@ export const TaskProvider = ({ children }) => {
       t.id === id ? { ...t, completed: !t.completed } : t
     ));
   };
+  const editTask = (updatedTask) => {
+    setTasks(prev =>
+      prev.map(task =>
+        task.id === updatedTask.id ? updatedTask : task
+      )
+    );
+  };
+  const deleteTask = (taskId) => {
+    setTasks((prevTasks) => prevTasks.filter((task) => task.id !== taskId));
+  };
+  
+  
 
   const [selectedTask, setSelectedTask] = useState(null);
 
@@ -49,6 +61,8 @@ export const TaskProvider = ({ children }) => {
         selectedTask,
         setSelectedTask,
         clearAllTasks,
+        editTask,
+        deleteTask,
       }}
     >
       {children}
